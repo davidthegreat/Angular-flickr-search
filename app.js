@@ -12,7 +12,7 @@
 				url: 'https://api.flickr.com/services/rest',
 				params: {
 					method: 'flickr.photos.search',
-					api_key: ,
+					api_key: API_KEY,
 					text: $scope.searchTerm,
 					format: 'json',
 					nojsoncallback: 1
