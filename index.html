@@ -18,7 +18,10 @@
 	<md-content layout="column" layout-align="center center">
 		<div class="app-content">
 		    <form ng-submit="search()">
+		    <div ng-show="!isSearching">
 		       <input ng-model="searchTerm"></input>
+		      </div>
+		       <md-progress-circular ng-if="isSearching" nd-theme="blue" nd-mode="indeterminate"></md-progress-circular>
 		    </form> 
 
 		    <md-card ng-repeat="picture in results.photos.photo"> 
