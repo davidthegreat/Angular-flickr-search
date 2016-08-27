@@ -5,8 +5,12 @@
 	.controller('listController',['$scope', '$http', function($scope, $http){
 
 		$scope.results = [];
+		$scope.isSearching = false;
 
 		$scope.search = function(){
+
+			$scope.isSearching = true;
+
 			$http({
 				method: 'GET',
 				url: 'https://api.flickr.com/services/rest',
